@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'sign_inup.css'%}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="{% static 'Images/icon-onegroupsix.jpg'%} " type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1131c4ee05.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% if messages %}
+    <ul class="messages" style="color:white;">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}  </li>
+    {% endfor %}
+    </ul>
+    {% endif %}    
+    <div class="wrapper">
+        <form action="signup" method = "POST">
+            {% csrf_token %}
+            <h1>Sign Up</h1>
+            <div class="input_box">
+                <input type="text" id="name" name="name" placeholder="Your Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input_box">
+                <input type="text" id="gender" name="gender" placeholder="Gender" required>
+                <i class="fa-solid fa-venus-mars"></i>
+            </div>
+            <div class="input_box">
+                <input type="text" id="email" name="email" placeholder="Your Email" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input_box">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            
+        </form>
+    </div>
+</body>
+</html>

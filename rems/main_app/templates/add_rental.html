@@ -1,0 +1,134 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OneGroupSix Employee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="{% static 'add_rental.css'%}">
+    <link rel="icon" href="{% static 'Images/icon-onegroupsix.jpg'%}" type="image/x-ic">
+</head>
+<body>
+    <script> //For logut button
+        function confirmLogout() {
+          if (confirm("Are you sure you want to logout?")) {
+            // Redirect to the logout URL <!-- removed .html for django -->
+            window.location.href = "home"; 
+          }
+        }
+      </script>
+    <div class="menu_bar">
+        <img src="{% static 'Images/logo2.png'%}" class="logo">
+        <ul>
+            <li><a href="dash_employee">Home</a></li>
+            <li>
+                <a href="#">Property Info <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="update_property">Update Property</a></li>
+                        <li><a href="update_rental">Update Rental</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">Profile <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="#">My Info</a></li>
+                        <li><a herf="#"onclick="confirmLogout()">Logout</a></li>                    
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="details">
+        <section class="backg">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="add_property" id="add_property">Add Property</a></li>
+                    <li><a href="add_rental" id="add_rental">Add Rental</a></li>
+                    <li><a href="view_property" id="view_property">View Property</a></li>
+                    <li><a href="client_booking" id="client_booking">Client Booking</a></li>
+                    <li><a href="client_info" id="client_info">Client Info</a></li>
+                    <li><a href="transaction" id="transaction">Transaction</a></li>
+                    <li><a href="payment_info" id="payment_info">Payment Info</a></li>
+                    <li><a href="view_employee" id="add_employee">View Employee</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="dashboard">
+            <form class="add-property-form" action="add_rental"  method = "POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div>
+                    <label for="r_id">Rental ID:</label>
+                    <input type="text" id="r_id" name="r_id" placeholder="Rental ID">
+                    <label for="location">Location:</label>
+                    <select name="location" id="location">
+                        <option selected disabled>Location</option>
+                        <option>Banasree</option>
+                        <option>Badda</option>
+                        <option>Banani</option>
+                        <option>Banani DOHS</option>
+                        <option>Baridhara</option>
+                        <option>Bashundhara</option>
+                        <option>Elephant Road</option>      
+                        <option >Gulshan</option>
+                        <option >Mirpur</option>
+                        <option >Mirpur DOHS</option>
+                        <option >New Market</option>
+                        <option >Purbachal</option>
+                        <option >Shaymoli</option>
+                        <option >Uttara</option>
+                    </select>
+                    <label for="resident">Resident:</label>
+                    <select name="resident" id="resident">
+                        <option selected disabled>Resident</option>
+                        <option>Apartment</option>
+                        <option>Flat</option>
+                        <option>Penthouse</option>
+                        <option>Duplex</option>
+                        <option>Plaza</option>
+                        <option>Building</option>
+                        <option>Shared Room</option>
+                    </select>
+                    <label for="status">Contact Info:</label>
+                    <input type="text" name="contact_no" id="contact_no" placeholder="Contact Info">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" placeholder="Description">
+                </div>
+                <div>
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" placeholder="Price">
+                    <label for="area">Area:</label>
+                    <input type="number" id="area" name="area" placeholder="Area">
+                    <label for="bedroom">Bedroom:</label>
+                    <input type="number" id="bedroom" name="bed" placeholder="Bedroom">
+                    <label for="bathroom">Bathroom:</label>
+                    <input type="number" id="bathroom" name="bath" placeholder="Bathroom">
+                    
+                    <div class="choose-images">
+                        <label for="image1" >Upload Images : </label>
+                    </div> 
+                    <div>
+                        <br>
+                    </div>
+                    <div class="choose-images">   
+                        <input type="file" id="image1" name="image1" style="color:LightGray;,"required/>
+                    </div>
+                    <div class="choose-images">   
+                        <input type="file" id="image2" name="image2" style="color:LightGray;"required/>
+                    </div>
+                </div>
+                <input type="submit" value="Add Property" >
+            </form>
+        </div>
+    </section>
+</body>
+<footer>
+    <div class="footerBottom">
+        <p>&copy; COPYRIGHT 2024 OneGroupSix ALL RIGHTS RESERVED.<p>
+    </div>
+</footer>
+</html>

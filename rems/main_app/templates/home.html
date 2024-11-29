@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneGroupSix Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="shortcut icon" href="{% static 'Images/icon-onegroupsix.jpg' %}" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/1131c4ee05.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="pic">
+            <img src="{% static 'Images/home_page_image.jpg'%}" alt="">
+        </div>
+        <div class="content">
+            <div class="name">
+                <img class="logo" src="{% static 'Images/logo2.png'%}" alt="">
+                 <button class="btn"><a href="employee_signinup">Employee</a></button></div>
+            <div class="heading">
+                <h1>Find your <span>Ideal Property</span> to trade or rent. </h1>
+            </div>
+            <div class="in-up">
+                <button class="btn"><a href="signin">Sign In</a></button> <!-- remove .html for django -->
+                <button class="btn"><a href="signup">Sign Up</a></button> <!-- remove .html for django -->
+            </div>
+                <div class="social-links">
+                    <div class="social_logo">
+                    <a href="https://www.facebook.com/BUBTOfficial"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="about_link">
+                    <a href="AboutUs">About Us</a> <!-- remove .html for django -->
+                    <a href="ContactUs">Contact Us</a> <!-- remove .html for django -->
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <h3>&copy; 2024 OneGroupSix Real Estate. All rights reserved.</h3>
+</footer>
+</html>

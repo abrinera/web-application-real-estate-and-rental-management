@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+}
+
+.menu_bar {
+    background-color: #073F33;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.logo {
+    width: 180px;
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+.menu_bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu_bar ul li {
+    padding: 10px 30px;
+    position: relative;
+
+}
+
+.menu_bar ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu_bar ul li a:hover {
+    color: cadetblue;
+    transition: all .3s;
+}
+
+.dropdown_menu {
+    display: none;
+}
+
+.menu_bar ul li:hover .dropdown_menu {
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgba(221, 162, 74, 0.5);
+}
+
+.dropdown_menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.dropdown_menu ul li {
+    font-family: Inter;
+    font-size: 5px;
+    font-weight: bold;
+    margin: 10px;
+    background: #073F33;
+    width: 190px;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.backg {
+    height: calc(100vh - 80px);
+    background-image: url(Images/home3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    height: 817px;
+    /* height: calc(100% - 80px); */
+    width: 350px;
+    background-color: rgba(245, 243, 241, 0.514);
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+    background: #10977aae;
+    width: 210px;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+
+}
+
+.sidebar ul li a:hover {
+    background-color: #073F33;
+    transition: color 0.3s linear;
+}
+#add_rental{
+    background-color: #073F33;
+}
+/* main content */
+.details {
+    display: flex;
+    height: calc(100vh - 80px);
+    background-image: url(Images/home3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main {
+    flex: 2;
+    padding: 20px 30px;
+}
+
+.content {
+
+    height: 80vh;
+    border: 1px solid rgba(21, 20, 20, 0.621);
+    background-color: rgba(21, 20, 20, 0.621);
+    margin-left: 350px;
+    align-items: center;
+}
+.dashboard {
+    height: 700px;
+    width: 1200px;
+    background-color: rgba(21, 20, 20, 0.621);
+    margin-top: 50px;
+    margin-left: 550px;
+    padding: 20px;
+}
+
+.add-property-form {
+    max-width: 1200px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+}
+
+.add-property-form label {
+    font-weight: bold;
+}
+
+label{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.add-property-form input[type="text"],
+.add-property-form input[type="number"],
+.add-property-form select {
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#resident{
+    color: rgb(100, 99, 99);
+}
+#location{
+    color: rgb(100, 99, 99);
+}
+
+.add-property-form .choose-images {
+    grid-column: span 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-property-form .choose-images button {
+    background-color: #073F33;
+    color: white;
+    font-size: 50px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.add-property-form .choose-images button:hover {
+    background-color: #10977aae;
+}
+
+.add-property-form input[type="submit"] {
+    background-color: #10977aae;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    grid-column: span 2;
+    margin: 20px auto;
+    display: block;
+}
+
+.add-property-form input[type="submit"]:hover {
+    background-color: #073F33;
+}
+footer {
+    position: relative;
+    height: 5em;
+    bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    color: aliceblue;
+    background-color: #073F33;
+}

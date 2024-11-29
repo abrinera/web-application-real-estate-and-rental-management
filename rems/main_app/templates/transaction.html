@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OneGroupSix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="{% static 'transaction.css '%}">
+    <link rel="icon" href="{% static 'Images/logo.jpg '%}" type="image/x-ic">
+</head>
+<body>
+  <script> //For logut button
+    function confirmLogout() {
+      if (confirm("Are you sure you want to logout?")) {
+        // Redirect to the logout URL <!-- removed .html for django -->
+        window.location.href = "home"; 
+      }
+    }
+  </script>
+    <div class="menu_bar">
+            <img src="{% static 'Images/logo.png '%}" class="logo">
+        <ul>
+          <li><a href="dash_employee">Home</a></li>
+            <li>
+                <a herf="#">Property Info  <i class= "fa fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="update_property">Update Property</a></li>
+                        <li><a href="update_rental">Update Rental</a></li>
+                    </ul>
+                </div>
+                
+            </li>
+            <li>
+                <a herf="#">Profile <i class= "fa fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a herf="#">My Info</a></li>
+                        <li><a herf="#"onclick="confirmLogout()">Logout</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="backg">
+        <div class="sidebar">
+            <ul>
+                <li><a href="add_property">Add Property</a></li>
+                <li><a href="add_rental">Add Rental</a></li>
+                <li><a href="view_property">View Property</a></li>
+                <li><a href="client_booking">Client Booking</a></li>
+                <li><a href="client_info">Client Info</a></li>
+                <li><a href="transaction" id="transaction">Transaction</a></li>
+                <li><a href="payment_info">Payment Info</a></li>
+                <li><a href="view_employee">View Employee</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+        <form class="form" action="transaction"  method = "POST" enctype="multipart/form-data">
+        {% csrf_token %}
+          <div class="form-group">
+            <label for="trans_no">Transaction No </label>
+            <input type="text" id="trans_no" name="trans_no" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="property_id">Property ID </label>
+            <input type="text" id="property_id" name="property_id" value="{{Property.property_id}}" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="client_nid">Client NID </label>
+            <input type="text" id="client_nid" name="client_nid" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="first_name">First Name </label>
+            <input type="text" id="fname" name="fname" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last Name </label>
+            <input type="text" id="lname" name="lname" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="account_no">Account No </label>
+            <input type="text" id="account_no" name="account_no" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount Paid </label>
+            <input type="text" id="amount" name="amount" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="text7"> Payment </label>
+            <select name="payment_method" id="payment_method" name="payment_method">
+              <option selected disabled>Payment Method</option>
+              <option>Online</option>
+              <option>Bank</option>
+              <option>Bkash</option>
+              <option>Rocket</option>
+              <option>Credit Card</option>
+              <option>Debit Card</option>
+              <option>Check</option>      
+          </select>
+          </div>
+          <button type="submit">Add Transaction</button>
+        </form>
+      </div>
+      
+      <div class="white-area">
+        <div class="inside-white">
+        <h2>Transaction Table</h2>
+        <br/><hr/>
+        {%for trans in trans_list%}
+        <strong>{{trans}}</strong>
+        <ul>
+        <li>Name: {{ trans.fname}} {{ trans.lname}}</li>
+        
+        <li>NID: {{ trans.client_nid}} </li>
+        <li> Property ID: {{trans.pid}}</li>
+        <li>Amount: {{ trans.amount}}</li>
+        <li>Date: {{ trans.entry_date}}</li>
+          <br/><hr/>
+        </ul>
+        {% endfor %}
+      </div>
+      </div>
+
+    </div>
+</body>
+<footer>
+    <h3>&copy; COPYRIGHT 2024 OneGroupSix ALL RIGHTS RESERVED.</h3>
+</footer>
+</html>

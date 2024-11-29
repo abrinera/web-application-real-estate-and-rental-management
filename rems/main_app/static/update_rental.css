@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+}
+
+.menu_bar {
+    background-color: #073F33;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.logo {
+    width: 180px;
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+.menu_bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu_bar ul li {
+    padding: 10px 30px;
+    position: relative;
+
+}
+
+.menu_bar ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu_bar ul li a:hover {
+    color: cadetblue;
+    transition: all .3s;
+}
+
+.dropdown_menu {
+    display: none;
+}
+
+.menu_bar ul li:hover .dropdown_menu {
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgba(221, 162, 74, 0.5);
+}
+
+.dropdown_menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.dropdown_menu ul li {
+    font-family: Inter;
+    font-size: 5px;
+    font-weight: bold;
+    margin: 10px;
+    background: #073F33;
+    width: 190px;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.backg {
+    height: calc(100vh - 80px);
+    background-image: url(Images/home3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* main content */
+.details {
+    display: flex;
+    height: calc(100vh - 80px);
+    background-image: url(Images/home3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main {
+    flex: 2;
+    padding: 20px 30px;
+}
+
+.content {
+
+    height: 80vh;
+    border: 1px solid rgba(21, 20, 20, 0.621);
+    background-color: rgba(21, 20, 20, 0.621);
+    margin-left: 350px;
+    align-items: center;
+}
+.dashboard {
+    height: 700px;
+    width: 1600px;
+    background-color: rgba(21, 20, 20, 0.621);
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.add-property-form {
+    max-width: 1200px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+}
+
+.up{
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.add-property-form label {
+    font-weight: bold;
+}
+
+label{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.add-property-form input[type="text"],
+.add-property-form input[type="number"],
+.add-property-form input[type="search"],
+.add-property-form select {
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+#status{
+    color:rgb(100, 99, 99)
+}
+#resident{
+    color: rgb(100, 99, 99);
+}
+#description{
+    height: 180px;
+}
+#property_id{
+    width: 270px;
+    height: 60px;
+}
+.form-container {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.add-property-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+/* buttons */
+.bottom-center {
+    text-align: center;
+}
+.bottom-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    padding-top: 80px;
+}
+
+.update-btn,
+.delete-btn {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 25px;
+    gap: 500px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn {
+    background-color: #10977ad5;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.update-btn:hover{
+    background-color: #073F33;
+}
+.delete-btn:hover {
+    background-color: darkred;
+}
+#search_button{
+    position: absolute;
+    margin-top: 15px;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    background:#10977aae;
+    border: none;
+    border-radius: 20%;
+    border: 2px solid #073F33;
+}
+#search_button:hover{
+    background: #787cef;
+}
+/* footer */
+footer {
+    position: relative;
+    height: 5em;
+    bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    color: aliceblue;
+    background-color: #073F33;
+}

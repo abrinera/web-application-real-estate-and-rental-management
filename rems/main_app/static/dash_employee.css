@@ -1,0 +1,128 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+    font-family: Inter;
+}
+.menu_bar{
+    background-color: #073F33  ;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.logo{
+    width: 180px;
+	cursor: pointer;
+    margin-left: -30px;
+}
+
+.menu_bar ul{
+    list-style: none;
+    display: flex;
+}
+.menu_bar ul li{
+    padding: 10px 30px;
+    position: relative;
+
+}
+.menu_bar ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+.menu_bar ul li a:hover {
+    color:cadetblue;
+    transition: all .3s;
+}
+.dropdown_menu{
+    display: none;
+}
+.menu_bar ul li:hover .dropdown_menu{
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color:rgba(221, 162, 74, 0.5);
+}
+.dropdown_menu ul{
+    display: block;
+    margin: 10px;
+}
+.dropdown_menu ul li{
+    font-family:Inter;
+    font-size: 5px;
+    font-weight: bold;
+    margin: 10px;
+    background: #073F33 ;
+    width: 190px;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.backg{
+    height: calc(100vh - 80px);
+    background-image: url(./Images/home3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sidebar {
+    position: absolute;
+    left: 0;
+    height: calc(100% - 80px);
+    width: 350px;
+    background-color: rgba(245, 243, 241, 0.514);;
+    z-index: 1;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 35px;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    font-family:Inter;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+    background: #10977aae ;
+    width: 210px;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+
+}
+.sidebar ul li a:hover{
+    background-color: #073F33 ;
+    transition: color 0.3s linear;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    height: 60px;
+    text-align:center;
+    font-size: 14px;
+    padding: 20px 0;
+    color:aliceblue;
+    background-color:  #073F33;
+}

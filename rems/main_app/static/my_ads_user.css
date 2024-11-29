@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+    overflow-y: scroll;
+  
+}
+
+.menu_bar {
+    background-color: #073F33;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.logo {
+    width: 175px;
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+.menu_bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu_bar ul li {
+    padding: 10px 30px;
+    position: relative;
+
+}
+
+.menu_bar ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu_bar ul li a:hover {
+    color: cadetblue;
+    transition: all 0.3s;
+}
+
+.dropdown_menu {
+    display: none;
+    z-index: 1;
+}
+
+.menu_bar ul li:hover .dropdown_menu {
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: rgba(189, 170, 141, 0.342);
+}
+
+.dropdown_menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.dropdown_menu ul li {
+    font-family: Inter;
+    font-size: 5px;
+    font-weight: bold;
+    margin: 10px;
+    background: #073F33;
+    width: 180px;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#feature{
+    width: 100%;
+    padding: 40px 0;
+    background-color:white; 
+    overflow:hidden
+  }
+  .titele_text{
+    position: absolute; 
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .titele_text h1{
+    margin: auto;
+    font-size: 35px;
+    font-weight:bolder;
+    margin-bottom: 30px;
+  }
+  .titele_text span{
+    font-size: 38px;
+    color: rgb(231, 14, 14);
+    font-weight:bolder;
+  }
+  .container{
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  .product-container {
+    display: flex;
+    width: 50%;
+    height: 300px;
+    border-style:solid;
+    border-color:rgba(26, 25, 25, 0.247);
+    border-width: thin;
+    box-shadow: 4px 2pc 50px rgba(0, 0, 0, 0.233);
+    border-radius: 8px;
+    margin: 15px;
+  }
+  
+  .product-image {
+    position:-webkit-sticky;
+    width: 400px;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: 298px;
+  }
+  .product-image:hover{
+    transform: scale(1.2);
+    margin-right: 40px;
+  }
+  
+  .product-details {
+    flex: 1;
+    padding: 20px;
+    font-size: 20px;
+  }
+  .pinfo{
+    display: flex;
+    padding: 5px 5px;
+  }
+  .Abold{
+    font-weight: bold;
+  }
+  .icon{
+    color: #073F33;
+    font-size: 20px;
+  }
+  .price{
+    font-size: 30px;
+  }
+  .bdt{
+    font-size: 20px;
+  }
+  .price,
+  .rtype,.area,
+  .location {
+    margin: 0 0 10px 0;
+  }
+  .property-decription{
+    width: 450px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .view-link {
+    font-size: 15px;
+    display: inline-block;
+    background-color:black;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .view-link:hover {
+    text-decoration: underline;
+  }
+  footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#073F33;
+  }
+  .footerContainer{
+    padding: 50px 30px 20px;
+  }
+  .socialIcon{
+    display: flex;
+    justify-content: center;
+  }
+  .socialIcon a{
+    text-decoration: none;
+    padding: 10px;
+    background-color:white ;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .socialIcon a i{
+    font-size: 1.5em;
+    color: #062e25;
+    opacity: 0.9;
+  }
+  .socialIcon a:hover{
+    background-color:#0a3027;
+    transition: 0.5s;
+  }
+  .socialIcon a:hover i{
+    color: white;
+    transition: 0.5;
+  }
+  .footerNav{
+    margin: 30px 0;
+  
+  }
+  .footerNav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+  .footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .footerNav ul li a:hover{
+    opacity: 1;
+  }
+  .footerBottom{
+    background-color:#082b24;
+    padding: 20px;
+    text-align: center;
+  }
+  .footerBottom p{
+    color: white;
+  }
+  @media (max-width:700px)
+  {
+    .footerNav ul{
+      flex-direction: column;
+    }
+    .footerNav ul li{
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+    }
+  }
